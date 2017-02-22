@@ -1,0 +1,45 @@
+<form method="POST" action="/pizzas/<%= @pizza.id %>">
+  
+  <label for="first_name">First Name: </label>
+ 
+  <input 
+  type="text" 
+  id="first_name"
+  name="first_name"
+  value="<%= @pizza.first_name %>"/> 
+  
+
+  <label for="last_name">Last Name: </label>
+  <input 
+  type="text"
+  id="last_name"
+  name="last_name"
+  value="<%= @pizza.last_name %>/>"/> 
+
+  <label for="pizza-select">Select Pizza: </label>
+  
+  <select  
+  id="pizza-select"
+  name="topping">
+
+  <!-- adds a property to the option tab. if it's present the automatic choice is that value. -->
+
+    <option  <%= "selected" if (@pizza.topping == "Margherita") %> 
+    value="Margherita">Margherita</option>
+    <option <%= "selected" if (@pizza.topping == "Pepperoni") %> value="Pepperoni">Pepperoni</option>
+  </select> 
+
+  <label for="quantity">Quantity: </label>
+  <input 
+value="<%= @pizza.quantity %> "
+  min="1"
+  max="50"
+  type="number" 
+  name="quantity"
+  id="quantity"/> 
+
+  <input type="submit" value="Click to confirm"/>
+
+</form>
+
+<hr />

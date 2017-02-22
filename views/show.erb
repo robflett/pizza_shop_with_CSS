@@ -1,0 +1,42 @@
+  <div class="details">
+  <p>First Name: <%= @pizza.first_name %></p>
+
+  <p>Last Name: <%= @pizza.last_name %></p>
+
+  <p>Total Cost: <%= @pizza.total %></p> 
+  
+  <p>Order: <%= @pizza.topping %></p>
+
+  <p>Quantity: <%= @pizza.quantity %></p>
+  </div>
+  <hr /> 
+
+
+  
+  <form method="POST" action="/pizzas/<%= @pizza.id %>/delete">
+
+    <input type="submit" value="Click to delete"/>
+
+  </form>
+<!-- 
+  <form method="POST" action="/pizzas/:id">
+
+    <input type="submit" value="Click to Update Order"/>
+    <!-- <a href="/pizzas/new">Update your Order</a> -->
+
+  <!-- </form> --> -->
+  <div class="navbar">
+  <a href="/pizzas/<%= @pizza.id %>/edit">Edit Order </a>
+  </div>
+
+
+  <!-- <form method="POST" action="/pizzas/<%= @pizza.id %>/edit">
+  this form info tells your button what to do
+
+    <input type="submit" value="Click to Edit Your Order"/>
+   
+
+  </form> -->
+  
+
+ 

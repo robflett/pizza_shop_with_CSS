@@ -1,0 +1,14 @@
+<!-- <p>All the pizzas</p> -->
+
+<% @pizzas.each do |pizza|  %> 
+  <p>Name: <%= pizza.pretty_name() %></p> 
+  <!-- to run Ruby code use <% %> but to run and return from Ruby code <%= %> -->
+  <p>Order: <%= pizza.quantity() %> x <%= pizza.topping %></p>
+    <div class="navbar">
+  <p> <a href="/pizzas/<%= pizza.id %>">Show Order</a> </p> 
+    </div>
+  <!-- this is the pizza element from the loop -->
+  <hr /> 
+  <!-- <hr /> displays a horizontal line across the page -->
+
+ <% end %>

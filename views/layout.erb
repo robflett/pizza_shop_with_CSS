@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Shop</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  
+  <div class="navbar">
+    <ul>
+      <li>
+        <a href="/pizzas">Pizza Orders</a>
+        <!-- This is a link for a Nav bar that will fit on every page -->
+      </li>    
+      <li>
+        <a href="/pizzas/new">Place a new order</a>
+        <!-- This is a link for a Nav bar that will fit on every page -->
+      </li>        
+    </ul>
+  </div>
+
+
+  <%= yield %>
+
+  <div class="image">
+  <a href="/pizzas/new"><img src="http://www.pizza-shoppe.com/frameworks/pizza-shoppe/images/page-logo.png"></a>
+  </div>
+  <!-- <img src="https://www.insidermedia.com/uploads/news/pizza-1344720_960_720.jpg"> -->
+</body>
+</html>

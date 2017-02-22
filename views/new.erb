@@ -1,0 +1,36 @@
+<form method="POST" action="/pizzas">
+  <!-- you are able to click the label to get into the field box -->
+  <label for="first_name">First Name: </label>
+  <!-- adding label for will mean that screen readers can parse the text you're writing -->
+  <input type="text" 
+  id="first_name"
+  name="first_name"/> 
+  <!-- name must match the column in the database -->
+
+  <label for="last_name">Last Name: </label>
+  <input type="text" 
+  id="last_name"
+  name="last_name"/> 
+
+  <label for="pizza-select">Select Pizza: </label>
+  
+  <select  
+  id="pizza-select"
+  name="topping">
+  <!-- creates a drop down box with the options below -->
+    <option value="Margherita">Margherita</option>
+    <option value="Pepperoni">Pepperoni</option>
+  </select> 
+
+  <label for="quantity">Quantity: </label>
+  <input min="1"
+  max="50"
+  type="number" 
+  name="quantity"
+  id="quantity"/> 
+
+  <input type="submit" value="Click to confirm"/>
+
+</form>
+
+<hr />
